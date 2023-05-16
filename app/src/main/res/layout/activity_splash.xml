@@ -10,9 +10,9 @@
     android:gravity="center">
 
     <ImageView
-        android:layout_width="206dp"
-        android:layout_height="300dp"
-        android:src="@drawable/ic_launcher_background" />
+        android:layout_width="205dp"
+        android:layout_height="236dp"
+        android:src="@drawable/logo_trabas1" />
 
     <ProgressBar
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
