@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialog_scan_bar">
+
+<!--    Uji Coba Fitur-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="100dp"
+        android:paddingBottom="50dp"
+        android:text="[Fitur dalam pengembangan]"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:textColor="@color/trabas_black" />
+
+</LinearLayout>

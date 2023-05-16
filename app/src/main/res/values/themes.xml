@@ -1,9 +1,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.TraBasAccess" parent="Theme.MaterialComponents.Light.DarkActionBar">
+    <style name="Theme.TraBasAccess" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorPrimary">@color/trabas_gray</item>
+        <item name="colorPrimaryVariant">@color/trabas_red</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
@@ -20,6 +20,7 @@
         <item name="android:drawablePadding">10dp</item>
         <item name="android:textColor">@color/black</item>
     </style>
+  
     <style name="BtnLogin">
         <item name="android:layout_width">220dp</item>
         <item name="android:layout_height">wrap_content</item>
@@ -27,4 +28,10 @@
         <item name="android:layout_margin">10dp</item>
         <item name="backgroundTint">@color/btn_press</item>
     </style>
+  
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_scan_button</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_scan_button</item>
+    </style>
+
 </resources>
