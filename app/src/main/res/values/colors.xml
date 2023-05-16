@@ -7,4 +7,7 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="trabas_red">#b40000</color>
+    <color name="trabas_black">#2f2e2e</color>
+    <color name="trabas_gray">#C9C9C9</color>
 </resources>
