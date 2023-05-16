@@ -161,6 +161,6 @@
         android:layout_gravity="center_horizontal"
         android:textSize="18dp"
         android:layout_marginTop="15dp"
-        android:background="#C81B00"/>
+        android:background="@color/trabas_red"/>
 
 </LinearLayout>
