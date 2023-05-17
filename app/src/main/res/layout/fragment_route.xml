@@ -57,7 +57,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="400dp"
-                android:src="@raw/Koridor_2"
+                android:src="@raw/Koridor2"
                 android:paddingBottom="20dp"/>
             <TextView
                 android:layout_width="match_parent"
@@ -71,7 +71,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="400dp"
-                android:src="@raw/Koridor_3"/>
+                android:src="@raw/Koridor3"/>
 
 
         </LinearLayout>
