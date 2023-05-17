@@ -83,7 +83,7 @@
         android:id="@+id/belumPunyaAkunDaftar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:gravity="center_horizontal"
         android:layout_below="@id/btnLogin">
 
@@ -146,12 +146,12 @@
 
     <TextView
         android:id="@+id/ketentuan"
-        android:layout_width="300dp"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/icons"
         android:layout_centerInParent="true"
         android:text="Dengan mendaftar, Anda menyetujui Ketentuan Layanan kami dan mengakui bahwa Kebijakan Privasi kami berlaku untuk Anda."
         android:textAlignment="center"
-        android:textSize="12dp" />
+        android:textSize="12sp" />
 
 </RelativeLayout>
