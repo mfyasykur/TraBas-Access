@@ -10,6 +10,6 @@
         android:id="@+id/route"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:src="@drawable/map_trabas"/>
+        tools:src="@raw/map_trabas"/>
 
 </FrameLayout>
