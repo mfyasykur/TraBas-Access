@@ -16,7 +16,7 @@
         android:src="@drawable/logo_trabas1" />
 
     <TextView
-        android:id="@+id/login"
+        android:id="@+id/regis"
         android:layout_width="36dp"
         android:layout_height="3dp"
         android:layout_below="@id/logo"
@@ -31,10 +31,10 @@
         android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/username"
+        android:id="@+id/EnomorTelepon"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/login"
+        android:layout_below="@id/regis"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:drawableLeft="@drawable/ic_email"
@@ -48,7 +48,7 @@
         android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/username"
+        android:layout_below="@id/EnomorTelepon"
         android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="30dp"
@@ -62,7 +62,7 @@
         android:textColorHint="@color/black"/>
 
     <TextView
-        android:id="@+id/LupaPW"
+        android:id="@+id/LupaPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/password"
@@ -77,11 +77,11 @@
         style="@style/BtnLogin"
         android:text="masuk"
         android:backgroundTint="@color/btn_press"
-        android:layout_below="@id/LupaPW"
+        android:layout_below="@id/LupaPassword"
         android:layout_centerHorizontal="true"/>
 
     <TextView
-        android:id="@+id/punyaakun"
+        android:id="@+id/sudahada"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnLogin"
@@ -117,7 +117,7 @@
         android:textSize="12dp" />
 
     <LinearLayout
-        android:id="@+id/socialicons"
+        android:id="@+id/icons"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="500dp"
@@ -140,10 +140,10 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/kebijakan"
+        android:id="@+id/ketentuan"
         android:layout_width="360dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/socialicons"
+        android:layout_below="@id/icons"
         android:layout_marginTop="27dp"
         android:layout_centerInParent="true"
         android:text="Dengan mendaftar, Anda menyetujui Ketentuan Layanan kami dan mengakui bahwa Kebijakan Privasi kami berlaku untuk Anda."

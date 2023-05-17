@@ -1,25 +1,25 @@
 package com.ppb.trabas_access
 
-import android.R
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.button.MaterialButton
+import com.ppb.trabas_access.fragments.HomeFragment
 
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(com.ppb.trabas_access.R.layout.activity_login)
-            val savedLogin = getSharedPreferences("Login", MODE_PRIVATE)
-            val editSavedLogin = savedLogin.edit()
-            if (savedLogin.getString("Status", "Off")=="On"){
-                startActivity(Intent(this, MainActivity::class.java))
-            }
+        setContentView(R.layout.activity_login)
 
-        val btnLogin: MaterialButton = findViewById(com.ppb.trabas_access.R.id.btnLogin)
-
+        val btnLogin: MaterialButton = findViewById(R.id.btnLogin)
         btnLogin.setOnClickListener {
+            val intent = Intent(this, HomeFragment::class.java)
+            startActivity(intent)
+        }
+
+        val btnDaftar:  TextView = findViewById(R.id.btnLogin)
+        btnDaftar.setOnClickListener {
             val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
         }
