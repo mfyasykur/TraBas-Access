@@ -14,11 +14,11 @@ class LoginActivity : AppCompatActivity() {
 
         val btnLogin: MaterialButton = findViewById(R.id.btnLogin)
         btnLogin.setOnClickListener {
-            val intent = Intent(this, HomeFragment::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
 
-        val btnDaftar:  TextView = findViewById(R.id.btnLogin)
+        val btnDaftar:  TextView = findViewById(R.id.daftar)
         btnDaftar.setOnClickListener {
             val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
