@@ -7,7 +7,7 @@
 
     <!-- TODO: Update blank fragment layout -->
     <ImageView
-        android:id="@+id/img_item_photo"
+        android:id="@+id/route"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:src="@drawable/map_trabas"/>
