@@ -6,22 +6,35 @@
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
 
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="100dp"
+        android:src="@drawable/logo_trabas" />
+
     <TextView
+        android:id="@+id/login"
+        android:layout_below="@id/logo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/register"
-        android:text="Register"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="Login"
         android:textColor="@color/black"
         android:textSize="20dp"
-        android:textStyle="bold"
-        android:layout_margin="50dp"
-        android:gravity="center"/>
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/register"
+        android:layout_below="@id/login"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:drawableLeft="@drawable/baseline_person_24"
@@ -37,9 +50,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/username"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="20dp"
         android:drawableLeft="@drawable/baseline_password_24"
         android:drawablePadding="20dp"
         android:hint="Password"
@@ -71,30 +84,30 @@
         style="@style/EditTextLogin"
         android:layout_width="match_parent"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="10dp"
         android:layout_below="@id/btnLogin"
         android:gravity="center"
         android:text="or register in with"
         android:textSize="12dp" />
 
     <LinearLayout
+        android:id="@+id/socialicons"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="500dp"
-        android:id="@+id/socialicons"
+        android:layout_marginTop="550dp"
         android:gravity="center">
 
         <ImageView
-            android:layout_width="48dp"
-            android:layout_height="48dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_margin="20dp"
             android:src="@drawable/google" />
 
         <ImageView
-            android:layout_width="48dp"
-            android:layout_height="48dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
