@@ -12,7 +12,7 @@
     <ImageView
         android:layout_width="205dp"
         android:layout_height="236dp"
-        android:src="@drawable/logo_trabas1" />
+        android:src="@drawable/logo_trabas" />
 
     <ProgressBar
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
