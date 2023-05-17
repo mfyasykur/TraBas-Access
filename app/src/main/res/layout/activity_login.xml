@@ -9,10 +9,8 @@
     <ImageView
         android:id="@+id/logo"
         android:layout_width="278dp"
-        android:layout_height="191dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginEnd="100dp"
+        android:layout_height="278dp"
+        android:layout_centerHorizontal="true"
         android:src="@raw/logo_trabas1" />
 
     <TextView
@@ -42,7 +40,7 @@
         android:hint="Email / Nomor Telepon"
         android:padding="10dp"
         android:textColor="@color/black"
-        android:textColorHint="@color/black" />
+        android:textColorHint="@color/darkgrey" />
 
     <EditText
         android:id="@+id/password"
@@ -59,18 +57,18 @@
         android:inputType="textPassword"
         android:padding="10dp"
         android:textColor="@color/black"
-        android:textColorHint="@color/black"/>
+        android:textColorHint="@color/darkgrey"/>
 
     <TextView
         android:id="@+id/LupaPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/password"
         android:layout_marginBottom="10dp"
-        android:layout_marginLeft="280dp"
+        android:layout_below="@+id/password"
+        android:layout_alignEnd="@+id/password"
         android:text="Lupa Kata Sandi?"
         android:textColor="@color/black"
-        android:textSize="12dp" />
+        android:textSize="12sp" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnLogin"
@@ -78,40 +76,48 @@
         android:text="masuk"
         android:backgroundTint="@color/btn_press"
         android:layout_below="@id/LupaPassword"
+        android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"/>
 
-    <TextView
-        android:id="@+id/sudahada"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:id="@+id/belumPunyaAkunDaftar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btnLogin"
-        android:layout_marginBottom="10dp"
-        android:text="Belum punya akun?"
-        android:layout_marginLeft="130dp"
-        android:textColor="@color/black"
-        android:textSize="12dp"/>
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:layout_below="@id/btnLogin">
 
-    <TextView
-        android:id="@+id/daftar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btnLogin"
-        android:layout_marginBottom="10dp"
-        android:text="Daftar"
-        android:clickable="true"
-        android:layout_marginLeft="240dp"
-        android:textColor="@color/link"
-        android:textStyle="bold"
-        android:textSize="12dp"/>
+        <TextView
+            android:id="@+id/sudahada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Belum punya akun?"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/daftar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/sudahada"
+            android:text=" Daftar"
+            android:textColor="@color/link"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:clickable="true"
+            android:focusable="true" />
+
+    </RelativeLayout>
 
     <TextView
         style="@style/EditTextLogin"
         android:layout_width="match_parent"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="10dp"
-        android:layout_below="@id/daftar"
+        android:layout_below="@id/belumPunyaAkunDaftar"
         android:gravity="center"
         android:text="atau masuk dengan"
         android:textSize="12dp" />
@@ -120,7 +126,7 @@
         android:id="@+id/icons"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="500dp"
+        android:layout_marginTop="600dp"
         android:gravity="center">
 
         <ImageView
@@ -132,7 +138,6 @@
         <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="20dp"
@@ -141,13 +146,12 @@
 
     <TextView
         android:id="@+id/ketentuan"
-        android:layout_width="360dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/icons"
-        android:layout_marginTop="27dp"
         android:layout_centerInParent="true"
         android:text="Dengan mendaftar, Anda menyetujui Ketentuan Layanan kami dan mengakui bahwa Kebijakan Privasi kami berlaku untuk Anda."
         android:textAlignment="center"
-        android:textSize="12dp"/>
+        android:textSize="12dp" />
 
 </RelativeLayout>
