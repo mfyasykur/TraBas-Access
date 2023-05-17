@@ -6,12 +6,10 @@
     tools:context=".fragments.RouteFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ImageView
+        android:id="@+id/img_item_photo"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="RUTE"
-        android:gravity="center"
-        android:textSize="30sp"
-        android:textColor="@color/trabas_red" />
+        tools:src="@drawable/map_trabas"/>
 
 </FrameLayout>
