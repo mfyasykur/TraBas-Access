@@ -13,7 +13,7 @@
         android:layout_marginStart="100dp"
         android:layout_marginTop="0dp"
         android:layout_marginEnd="100dp"
-        android:src="@drawable/logo_trabas1" />
+        android:src="@raw/logo_trabas1" />
 
     <TextView
         android:id="@+id/regis"
@@ -127,7 +127,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_margin="20dp"
-            android:src="@drawable/google" />
+            android:src="@raw/google" />
 
         <ImageView
             android:layout_width="30dp"
@@ -136,7 +136,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="20dp"
-            android:src="@drawable/facebook" />
+            android:src="@raw/facebook" />
     </LinearLayout>
 
     <TextView
