@@ -14,7 +14,7 @@
         android:src="@raw/logo_trabas1" />
 
     <TextView
-        android:id="@+id/regis"
+        android:id="@+id/login"
         android:layout_width="36dp"
         android:layout_height="3dp"
         android:layout_below="@id/logo"
@@ -32,7 +32,7 @@
         android:id="@+id/EnomorTelepon"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/regis"
+        android:layout_below="@id/login"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:drawableLeft="@drawable/ic_email"
@@ -106,7 +106,7 @@
             android:textStyle="bold"
             android:textSize="12sp"
             android:clickable="true"
-            android:focusable="true" />
+            android:focusable="true"/>
 
     </RelativeLayout>
 
@@ -150,8 +150,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/icons"
         android:layout_centerInParent="true"
+        android:layout_marginTop="13dp"
         android:text="Dengan mendaftar, Anda menyetujui Ketentuan Layanan kami dan mengakui bahwa Kebijakan Privasi kami berlaku untuk Anda."
         android:textAlignment="center"
-        android:textSize="12sp" />
+        android:textSize="11sp" />
 
 </RelativeLayout>
