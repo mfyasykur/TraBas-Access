@@ -8,6 +8,7 @@ import android.view.Gravity
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.ppb.trabas_access.fragments.HomeFragment
@@ -16,6 +17,10 @@ import com.ppb.trabas_access.fragments.RouteFragment
 import com.ppb.trabas_access.fragments.ScheduleFragment
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var recyclerView: RecyclerView
+    private val tujuan = listOf("Baturaden", "Purwokerto Selatan", )
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -62,5 +67,9 @@ class MainActivity : AppCompatActivity() {
         }
 
         dialog.show()
+    }
+
+    private fun showListSchedule(){
+
     }
 }
