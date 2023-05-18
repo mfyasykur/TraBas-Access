@@ -150,8 +150,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/icons"
         android:layout_centerInParent="true"
+        android:layout_marginTop="13dp"
         android:text="Dengan mendaftar, Anda menyetujui Ketentuan Layanan kami dan mengakui bahwa Kebijakan Privasi kami berlaku untuk Anda."
         android:textAlignment="center"
-        android:textSize="12sp" />
+        android:textSize="11sp" />
 
 </RelativeLayout>
