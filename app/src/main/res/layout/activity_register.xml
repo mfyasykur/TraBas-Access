@@ -1,9 +1,157 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivity">
+    tools:context=".LoginActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/logo2"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_centerHorizontal="true"
+        android:src="@raw/logo_trabas1" />
+
+    <EditText
+        android:id="@+id/namaLengkap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo2"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:drawableLeft="@drawable/ic_person"
+        android:drawablePadding="20dp"
+        android:hint="Nama Lengkap"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/darkgrey" />
+
+    <EditText
+        android:id="@+id/EmailnomorTelepon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/namaLengkap"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:drawableLeft="@drawable/ic_email"
+        android:drawablePadding="20dp"
+        android:hint="Email / Nomor Telepon"
+        android:inputType="textEmailAddress|phone"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/darkgrey" />
+
+    <EditText
+        android:id="@+id/pw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/EmailnomorTelepon"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:drawableLeft="@drawable/ic_lock"
+        android:drawablePadding="20dp"
+        android:hint="Kata Sandi"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/darkgrey"/>
+
+    <TextView
+        android:id="@+id/LupaPW"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pw"
+        android:layout_alignEnd="@id/pw"
+        android:text="Lupa Kata Sandi?"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnRegister"
+        style="@style/BtnLogin"
+        android:text="daftar"
+        android:backgroundTint="@color/btn_press"
+        android:layout_below="@id/LupaPW"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"/>
+
+    <RelativeLayout
+        android:id="@+id/belumPunya"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:layout_below="@id/btnRegister">
+
+    <TextView
+        android:id="@+id/sudahAda2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Sudah Punya Akun?"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/masuk2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/sudahAda2"
+        android:text=" Masuk"
+        android:textColor="@color/link"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        android:clickable="true"
+        android:focusable="true"/>
+    </RelativeLayout>
+
+    <TextView
+        style="@style/EditTextLogin"
+        android:layout_width="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@id/belumPunya"
+        android:gravity="center"
+        android:text="atau masuk dengan"
+        android:textSize="12dp" />
+
+    <LinearLayout
+        android:id="@+id/socialicons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="600dp"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="20dp"
+            android:src="@raw/google" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:src="@raw/facebook" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/kebijakan"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/socialicons"
+        android:layout_marginTop="13dp"
+        android:layout_centerInParent="true"
+        android:text="Dengan mendaftar, Anda menyetujui Ketentuan Layanan kami dan mengakui bahwa Kebijakan Privasi kami berlaku untuk Anda."
+        android:textAlignment="center"
+        android:textSize="11sp"/>
+
+</RelativeLayout>

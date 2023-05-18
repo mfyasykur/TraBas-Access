@@ -6,100 +6,153 @@
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
 
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="278dp"
+        android:layout_height="278dp"
+        android:layout_centerHorizontal="true"
+        android:src="@raw/logo_trabas1" />
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/register"
-        android:text="Register"
+        android:id="@+id/login"
+        android:layout_width="36dp"
+        android:layout_height="3dp"
+        android:layout_below="@id/logo"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text=""
         android:textColor="@color/black"
         android:textSize="20dp"
-        android:textStyle="bold"
-        android:layout_margin="50dp"
-        android:gravity="center"/>
+        android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/username"
+        android:id="@+id/EnomorTelepon"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/register"
+        android:layout_below="@id/login"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-        android:drawableLeft="@drawable/baseline_person_24"
+        android:drawableLeft="@drawable/ic_email"
         android:drawablePadding="20dp"
-        android:hint="Username"
-        android:padding="20dp"
+        android:hint="Email / Nomor Telepon"
+        android:padding="10dp"
         android:textColor="@color/black"
-        android:textColorHint="@color/black" />
+        android:textColorHint="@color/darkgrey" />
 
     <EditText
         android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/username"
+        android:layout_below="@id/EnomorTelepon"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginBottom="30dp"
-        android:drawableLeft="@drawable/baseline_password_24"
+        android:layout_marginBottom="10dp"
+        android:drawableLeft="@drawable/ic_lock"
         android:drawablePadding="20dp"
-        android:hint="Password"
+        android:hint="Kata Sandi"
         android:inputType="textPassword"
-        android:padding="20dp"
+        android:padding="10dp"
         android:textColor="@color/black"
-        android:textColorHint="@color/black"/>
+        android:textColorHint="@color/darkgrey"/>
 
-    <CheckBox
-        android:id="@+id/saveLoginCheckBox"
+    <TextView
+        android:id="@+id/LupaPassword"
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
         android:layout_below="@+id/password"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="33dp"
-        android:layout_marginTop="5dp"
-        android:text="Remember me?"
-        android:textSize="16dp" />
+        android:layout_alignEnd="@+id/password"
+        android:text="Lupa Kata Sandi?"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnLogin"
         style="@style/BtnLogin"
-        android:text="Login"
+        android:text="masuk"
         android:backgroundTint="@color/btn_press"
-        android:layout_below="@id/saveLoginCheckBox"
+        android:layout_below="@id/LupaPassword"
+        android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"/>
+
+    <RelativeLayout
+        android:id="@+id/belumPunyaAkunDaftar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:layout_below="@id/btnLogin">
+
+        <TextView
+            android:id="@+id/sudahada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Belum punya akun?"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/daftar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/sudahada"
+            android:text=" Daftar"
+            android:textColor="@color/link"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:clickable="true"
+            android:focusable="true"/>
+
+    </RelativeLayout>
 
     <TextView
         style="@style/EditTextLogin"
         android:layout_width="match_parent"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
-        android:layout_below="@id/btnLogin"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@id/belumPunyaAkunDaftar"
         android:gravity="center"
-        android:text="or register in with"
+        android:text="atau masuk dengan"
         android:textSize="12dp" />
 
     <LinearLayout
+        android:id="@+id/icons"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="500dp"
-        android:id="@+id/socialicons"
+        android:layout_marginTop="600dp"
         android:gravity="center">
 
         <ImageView
-            android:layout_width="48dp"
-            android:layout_height="48dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_margin="20dp"
             android:src="@raw/google" />
 
         <ImageView
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_marginStart="20dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="20dp"
             android:src="@raw/facebook" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/ketentuan"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/icons"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="13dp"
+        android:text="Dengan mendaftar, Anda menyetujui Ketentuan Layanan kami dan mengakui bahwa Kebijakan Privasi kami berlaku untuk Anda."
+        android:textAlignment="center"
+        android:textSize="11sp" />
 
 </RelativeLayout>
