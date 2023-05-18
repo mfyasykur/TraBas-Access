@@ -40,7 +40,7 @@
                 android:text="PROFIL"
                 android:textColor="#fff"
                 android:textSize="23dp"
-                android:textStyle="bold" />
+                android:textStyle="bold"/>
         </LinearLayout>
 
         <androidx.cardview.widget.CardView
@@ -75,8 +75,6 @@
 
                 </LinearLayout>
             </LinearLayout>
-
-
         </androidx.cardview.widget.CardView>
     </RelativeLayout>
 
@@ -123,7 +121,6 @@
                 android:textSize="18dp"
                 android:paddingLeft="15dp"
                 android:layout_gravity="center_vertical"/>
-
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -143,10 +140,8 @@
                 android:textSize="18dp"
                 android:paddingLeft="15dp"
                 android:layout_gravity="center_vertical"/>
-
         </LinearLayout>
     </LinearLayout>
-
     <Button
         android:id="@+id/logout"
         android:layout_width="wrap_content"
@@ -156,5 +151,4 @@
         android:textSize="18dp"
         android:layout_marginTop="15dp"
         android:backgroundTint="@color/trabas_red"/>
-
 </LinearLayout>
