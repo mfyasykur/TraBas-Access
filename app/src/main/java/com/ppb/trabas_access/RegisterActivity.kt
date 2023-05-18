@@ -19,7 +19,7 @@ class RegisterActivity : AppCompatActivity() {
 
         val btnRegister: MaterialButton = findViewById(R.id.btnRegister)
         btnRegister.setOnClickListener {
-            val intent = Intent(this, LoginActivity::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
     }
