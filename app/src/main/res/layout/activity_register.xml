@@ -91,17 +91,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-        android:text="Belum Punya Akun"
+        android:text="Sudah Punya Akun?"
         android:layout_centerHorizontal="true"
         android:textColor="@color/black"
         android:textSize="12sp"/>
 
     <TextView
-        android:id="@+id/daftar"
+        android:id="@+id/masuk2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/sudahAda2"
-        android:text=" Daftar"
+        android:text=" Masuk"
         android:textColor="@color/link"
         android:textStyle="bold"
         android:textSize="12sp"
