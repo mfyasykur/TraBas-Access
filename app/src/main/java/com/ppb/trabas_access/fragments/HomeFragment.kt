@@ -57,4 +57,6 @@ class HomeFragment : Fragment() {
                 }
             }
     }
+
+    fun onNotificationButtonClicked(view: View) {}
 }
