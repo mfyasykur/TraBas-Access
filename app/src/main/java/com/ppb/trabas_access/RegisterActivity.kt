@@ -11,7 +11,7 @@ class RegisterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
-        val btnMasuk: TextView = findViewById(R.id.masuk)
+        val btnMasuk: TextView = findViewById(R.id.masuk2)
         btnMasuk.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
