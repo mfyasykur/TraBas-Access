@@ -11,13 +11,11 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="350dp">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:background="#C81B00"
             android:orientation="vertical">
-
             <androidx.cardview.widget.CardView
                 android:layout_width="140dp"
                 android:layout_height="140dp"
@@ -31,7 +29,6 @@
                     android:layout_height="match_parent"
                     android:src="@drawable/person" />
             </androidx.cardview.widget.CardView>
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -72,7 +69,6 @@
                         android:textColor="@color/black"
                         android:textSize="20dp"
                         android:textStyle="italic|normal"/>
-
                 </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -149,6 +145,6 @@
         android:text="keluar"
         android:layout_gravity="center_horizontal"
         android:textSize="18dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="70dp"
         android:backgroundTint="@color/trabas_red"/>
 </LinearLayout>
