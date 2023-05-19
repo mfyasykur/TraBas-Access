@@ -38,14 +38,6 @@
                 android:textColor="#fff"
                 android:textSize="23dp"
                 android:textStyle="bold" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Edit Profil"
-                android:layout_gravity="center"
-                android:paddingTop="10dp"
-                android:textColor="@color/white"
-                android:textStyle="italic"/>
         </LinearLayout>
 
         <androidx.cardview.widget.CardView
