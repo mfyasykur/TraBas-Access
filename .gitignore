@@ -81,7 +81,7 @@ captures/
 .idea/navEditor.xml
 
 # SonarLint
-.idea/sonarlint
+.idea/sonarlint/
 
 # Keystore files
 # Uncomment the following lines if you do not want to check your keystore files in.

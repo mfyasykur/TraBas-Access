@@ -16,6 +16,7 @@ import com.ppb.trabas_access.fragments.RouteFragment
 import com.ppb.trabas_access.fragments.ScheduleFragment
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -63,4 +64,5 @@ class MainActivity : AppCompatActivity() {
 
         dialog.show()
     }
+
 }
