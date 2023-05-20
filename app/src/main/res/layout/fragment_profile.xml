@@ -145,6 +145,6 @@
         android:text="keluar"
         android:layout_gravity="center_horizontal"
         android:textSize="18dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="@color/trabas_red"/>
 </LinearLayout>
