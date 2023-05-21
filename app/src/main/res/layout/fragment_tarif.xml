@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="25dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="TARIF"
+            android:textSize="25dp"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:padding="20dp"
+            android:textColor="@color/white"
+            android:background="@drawable/border"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/train"/>
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/imageView1"
+                android:text="TBA - BANYUMAS"
+                android:textColor="@android:color/black"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                tools:ignore="TextSizeCheck" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:text="RP. 4.000"
+                android:layout_below="@+id/imageView1"
+                android:textSize="14dp"
+                android:layout_toRightOf="@id/imageView1"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                tools:ignore="TextSizeCheck" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <ImageView
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/train"
+                android:id="@+id/imageView2"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/imageView2"
+                android:text="TBA - BANYUMAS"
+                android:textColor="@android:color/black"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                tools:ignore="TextSizeCheck,TextSizeCheck" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:text="RP. 4.000"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                tools:ignore="TextSizeCheck"
+                android:layout_below="@id/imageView2"
+                android:layout_toRightOf="@id/imageView2"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <ImageView
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/train"
+                android:id="@id/imageView3"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/imageView3"
+                android:text="TBA - BANYUMAS"
+                android:textColor="@android:color/black"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                tools:ignore="TextSizeCheck" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:text="RP. 4.000"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                tools:ignore="TextSizeCheck"
+                android:layout_below="@id/imageView3"
+                android:layout_toRightOf="@id/imageView3"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <ImageView
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/train"
+                android:id="@id/imageView4"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/imageView4"
+                android:text="TBA - BANYUMAS"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                tools:ignore="TextSizeCheck" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:text="RP. 4.000"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                tools:ignore="TextSizeCheck"
+                android:layout_toRightOf="@id/imageView4"
+                android:layout_below="@id/imageView4"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <ImageView
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/train"
+                android:id="@id/imageView5"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/imageView5"
+                android:text="TBA - BANYUMAS"
+                android:textColor="@android:color/black"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                tools:ignore="TextSizeCheck"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:text="RP. 4.000"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                tools:ignore="TextSizeCheck"
+                android:layout_below="@id/imageView5"
+                android:layout_toRightOf="@id/imageView5"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/map_utama"
+        android:title="Main Map"
+        android:icon="@drawable/train"/>
+    <item
+        android:id="@+id/koridor1"
+        android:title="Koridor 1"
+        android:icon="@drawable/koridor"/>
+    <item
+        android:id="@+id/koridor2"
+        android:title="Koridor 2"
+        android:icon="@drawable/koridor"/>
+    <item
+        android:id="@+id/koridor3"
+        android:title="Koridor 3"
+        android:icon="@drawable/koridor"/>
+</menu>
