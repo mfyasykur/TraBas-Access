@@ -1,14 +1,251 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.HomeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/home_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="15dp"
+        android:background="@color/white">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_collapseMode="pin">
+
+                <ImageView
+                    android:id="@+id/logo_home"
+                    android:layout_width="140dp"
+                    android:layout_height="50dp"
+                    android:src="@raw/logo_trabas_text_left"/>
+
+                <ImageButton
+                    android:id="@+id/notification_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:layout_gravity="end"
+                    android:src="@drawable/ic_notification"
+                    android:contentDescription="@string/notification_button"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:onClick="onNotificationButtonClicked" />
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/halo_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginStart="20dp"
+                    android:text="Halo User,\nMau jalan-jalan kemana nih?"
+                    android:textSize="30sp"
+                    android:fontFamily="@font/font_quan_rounded_regular"
+                    android:textStyle="bold"
+                    android:textColor="@color/trabas_red"/>
+
+                <RelativeLayout
+                    android:id="@+id/search_destinantion"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/halo_user"
+                    android:layout_marginTop="10dp"
+                    android:layout_alignStart="@id/halo_user"
+                    android:padding="5dp"
+                    android:background="@drawable/shape_background_appbar">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="Purwokerto Selatan"
+                        android:textSize="25sp"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/font_quan_rounded_regular"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/ic_search"
+                        android:layout_alignParentEnd="true"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/home_scroll"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_marginTop="180dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
 
-</FrameLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:id="@+id/notif_banner"
+                android:layout_width="370dp"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Lakukan perjalanan dengan mudah, Ayo isi saldo kamu sekarang!"
+                android:layout_centerHorizontal="true"
+                android:justificationMode="inter_word"
+                android:background="@drawable/shape_background_notif_home"/>
+
+            <LinearLayout
+                android:id="@+id/saldo_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_alignStart="@id/notif_banner"
+                android:layout_alignEnd="@id/notif_banner"
+                android:layout_below="@id/notif_banner"
+                android:orientation="horizontal"
+                android:background="@drawable/shape_background_saldobar">
+
+                <LinearLayout
+                    android:id="@+id/saldo"
+                    android:layout_width="114dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/shape_border_saldo">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Saldo"
+                        android:textSize="25sp"
+                        android:fontFamily="@font/font_quan_rounded_regular"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Rp 0"
+                        android:textSize="28sp"
+                        android:fontFamily="@font/font_quan_rounded_regular"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/poin"
+                    android:layout_width="114dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/shape_border_saldo">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Poin"
+                        android:textSize="25sp"
+                        android:fontFamily="@font/font_quan_rounded_regular"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="28sp"
+                        android:fontFamily="@font/font_quan_rounded_regular"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/history"
+                    android:layout_width="107dp"
+                    android:layout_height="64dp"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:background="@drawable/shape_border_saldo">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Riwayat"
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/font_quan_rounded_regular"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Transaksi"
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/font_quan_rounded_regular"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/halte_terdekat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/saldo_bar"
+                android:layout_alignStart="@id/saldo_bar"
+                android:layout_marginTop="20dp"
+                android:text="Halte Terdekat"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:textColor="@color/trabas_black"
+                android:fontFamily="@font/font_quan_rounded_regular" />
+            <ImageView
+                android:id="@+id/map"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_below="@id/halte_terdekat"
+                android:layout_marginTop="20dp"
+                android:layout_alignStart="@id/halte_terdekat"
+                android:layout_alignEnd="@id/saldo_bar"
+                android:background="@drawable/ic_launcher_background"/>
+
+            <TextView
+                android:id="@+id/rekomendasi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/map"
+                android:layout_alignStart="@id/map"
+                android:layout_marginTop="20dp"
+                android:text="Destinasi Wisata Banyumas"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:textColor="@color/trabas_black"
+                android:fontFamily="@font/font_quan_rounded_regular" />
+            <ImageView
+                android:id="@+id/gambar_destinasi"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_below="@id/rekomendasi"
+                android:layout_marginTop="20dp"
+                android:layout_alignStart="@id/map"
+                android:layout_alignEnd="@id/map"
+                android:background="@drawable/ic_launcher_background"/>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
