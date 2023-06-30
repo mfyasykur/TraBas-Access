@@ -14,8 +14,6 @@ t
 Dapp/src/main/java/com/ppb/trabas_access/fragments/ProfileFragment.kt,3\9\390fb0a474436cef2610e37c7929e99e72eddd2c
 ?
 settings.gradle,0\5\05efc8b1657769a27696d478ded1e95f38737233
-P
- app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
 q
 Aapp/src/main/java/com/ppb/trabas_access/fragments/ScanFragment.kt,2\6\26422510b298d316f0cdf39029e44bc83213f35b
 r
