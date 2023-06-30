@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "658822794510",
+    "firebase_url": "https://trabas-access-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "trabas-access",
+    "storage_bucket": "trabas-access.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:658822794510:android:abab343891018400f2db5f",
+        "android_client_info": {
+          "package_name": "com.ppb.trabas_access"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "658822794510-4r4o5juhf12dks5r60afrpsuq49evhk9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATjm1gcmX0n1QvjeBB7b6i5D44LSnOI3M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "658822794510-4r4o5juhf12dks5r60afrpsuq49evhk9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
