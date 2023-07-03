@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
             }
             true
         }
-        floatBottom.setOnClickListener { showBottomDialog() }
+        floatBottom.setOnClickListener { showBottomLayout() }
     }
 
     private fun makeCurrentFragment(fragment: Fragment) {
@@ -47,10 +47,10 @@ class MainActivity : AppCompatActivity() {
         fragmentTransaction.commit()
     }
 
-    private fun showBottomDialog() {
+    private fun showBottomLayout() {
         val dialog = Dialog(this)
 
-        dialog.setContentView(R.layout.bottom_sheet_scan_bar)
+        dialog.setContentView(R.layout.activity_scan)
 
         dialog.window?.apply {
             setLayout(

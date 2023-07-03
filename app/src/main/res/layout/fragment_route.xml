@@ -28,7 +28,7 @@
                 android:textStyle="bold" />
 
             <ImageView
-                android:id="@+id/route"
+                android:id="@+id/main_route"
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
                 android:paddingBottom="10dp"
@@ -45,6 +45,7 @@
                 android:textStyle="bold" />
 
             <ImageView
+                android:id="@+id/second_route"
                 android:layout_width="match_parent"
                 android:layout_height="400dp"
                 android:paddingBottom="5dp"
@@ -64,7 +65,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="400dp"
                 android:src="@raw/koridor2"
-                android:paddingBottom="20dp"/>
+                android:paddingBottom="5dp"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -80,7 +81,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="400dp"
                 android:src="@raw/koridor3"
-                android:paddingBottom="25dp"/>
+                android:paddingBottom="40dp"/>
 
         </LinearLayout>
     </ScrollView>
