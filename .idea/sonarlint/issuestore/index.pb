@@ -1,21 +1,4 @@
 
-<
-build.gradle,f\0\f07866736216be0ee2aba49e392191aeae700a35
-P
- app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
-w
-G.idea/sonarlint/issuestore/a/5/a5cc2925ca8258af241be7e5b0381edf30266302,e\d\ed67eb178d523a4b3f117dcbe0eda5196367ceec
-�
-Q.idea/sonarlint/securityhotspotstore/a/5/a5cc2925ca8258af241be7e5b0381edf30266302,3\0\30205a209c6ce77c4cfc19a09e6f57c588b7fb88
-@
-app/build.gradle,f\4\f4a01d6a4fcb971362ec00a83903fd3902f52164
-S
-#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
-]
--.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
-:
-
-.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
 9
 	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 r
@@ -32,7 +15,13 @@ q
 Aapp/src/main/java/com/ppb/trabas_access/fragments/ScanFragment.kt,2\6\26422510b298d316f0cdf39029e44bc83213f35b
 r
 Bapp/src/main/java/com/ppb/trabas_access/fragments/RouteFragment.kt,9\8\98ed0bd6cc73fe30418c43acd037b7321b4e577a
-q
-Aapp/src/main/java/com/ppb/trabas_access/fragments/HomeFragment.kt,3\4\34160086f68f1b3aa70e04cc4307d794dd3fb066
-g
-7app/src/main/java/com/ppb/trabas_access/MainActivity.kt,b\1\b1911d40d2ac9f681a0a4ec2dfc8673662323640
+H
+app/google-services.json,f\d\fd8d34b142d02ec743a8efefefd2c097961666e9
+F
+app/proguard-rules.pro,9\e\9e08934d811afe28fbc77aaa3c0d747b94348db9
+<
+build.gradle,f\0\f07866736216be0ee2aba49e392191aeae700a35
+P
+ app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
+k
+;app/src/main/java/com/ppb/trabas_access/RegisterActivity.kt,5\2\5220872c118e0d2ac0bf3221e61d7bc05526d205
