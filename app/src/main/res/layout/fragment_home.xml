@@ -54,16 +54,15 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="60dp"
                     android:layout_marginStart="20dp"
-                    android:text="Halo User,\nMau jalan-jalan kemana nih?"
                     android:textSize="30sp"
                     android:fontFamily="@font/font_quan_rounded_regular"
                     android:textStyle="bold"
-                    android:textColor="@color/trabas_red"/>
+                    android:textColor="@color/trabas_black"/>
 
                 <RelativeLayout
-                    android:id="@+id/search_destinantion"
+                    android:id="@+id/search_destination"
                     android:layout_width="300dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="35dp"
                     android:layout_below="@id/halo_user"
                     android:layout_marginTop="10dp"
                     android:layout_alignStart="@id/halo_user"
@@ -71,12 +70,12 @@
                     android:background="@drawable/shape_background_appbar">
 
                     <TextView
+                        android:id="@+id/tv_destinationSearch"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
-                        android:text="Purwokerto Selatan"
+                        android:text="Baturaden"
                         android:textSize="25sp"
-                        android:textAlignment="center"
                         android:fontFamily="@font/font_quan_rounded_regular"/>
                     <ImageView
                         android:layout_width="wrap_content"
@@ -121,6 +120,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
+                android:paddingLeft="10dp"
                 android:layout_alignStart="@id/notif_banner"
                 android:layout_alignEnd="@id/notif_banner"
                 android:layout_below="@id/notif_banner"
@@ -129,8 +129,8 @@
 
                 <LinearLayout
                     android:id="@+id/saldo"
-                    android:layout_width="114dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="110dp"
+                    android:layout_height="64dp"
                     android:orientation="vertical"
                     android:background="@drawable/shape_border_saldo">
 
@@ -138,21 +138,21 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Saldo"
-                        android:textSize="25sp"
+                        android:textSize="20sp"
                         android:fontFamily="@font/font_quan_rounded_regular"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Rp 0"
-                        android:textSize="28sp"
+                        android:textSize="25sp"
                         android:fontFamily="@font/font_quan_rounded_regular"/>
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/poin"
-                    android:layout_width="114dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="110dp"
+                    android:layout_height="64dp"
                     android:layout_marginStart="10dp"
                     android:orientation="vertical"
                     android:background="@drawable/shape_border_saldo">
@@ -161,20 +161,20 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Poin"
-                        android:textSize="25sp"
+                        android:textSize="20sp"
                         android:fontFamily="@font/font_quan_rounded_regular"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="0"
-                        android:textSize="28sp"
+                        android:textSize="25sp"
                         android:fontFamily="@font/font_quan_rounded_regular"/>
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/history"
-                    android:layout_width="107dp"
+                    android:layout_width="110dp"
                     android:layout_height="64dp"
                     android:layout_marginStart="10dp"
                     android:gravity="center"
@@ -184,17 +184,17 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Riwayat"
+                        android:text="Riwayat\nTransaksi"
                         android:textAlignment="center"
                         android:textSize="20sp"
                         android:fontFamily="@font/font_quan_rounded_regular"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Transaksi"
-                        android:textAlignment="center"
-                        android:textSize="20sp"
-                        android:fontFamily="@font/font_quan_rounded_regular"/>
+<!--                    <TextView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Transaksi"-->
+<!--                        android:textAlignment="center"-->
+<!--                        android:textSize="20sp"-->
+<!--                        android:fontFamily="@font/font_quan_rounded_regular"/>-->
 
                 </LinearLayout>
 
