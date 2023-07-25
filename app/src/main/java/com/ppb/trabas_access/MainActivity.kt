@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
     private fun showBottomLayout() {
         val dialog = Dialog(this)
 
-        dialog.setContentView(R.layout.activity_scan)
+        dialog.setContentView(R.layout.fragment_scan)
 
         dialog.window?.apply {
             setLayout(
