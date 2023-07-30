@@ -9,4 +9,5 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="scan_to_pay">Scan to Pay</string>
     <string name="notification_button">Notification</string>
+    <string name="hello_user">Halo, %1$s\nMau jalan-jalan kemana nih?</string>
 </resources>

@@ -54,16 +54,15 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="60dp"
                     android:layout_marginStart="20dp"
-                    android:text="Halo User,\nMau jalan-jalan kemana nih?"
                     android:textSize="30sp"
                     android:fontFamily="@font/font_quan_rounded_regular"
                     android:textStyle="bold"
-                    android:textColor="@color/trabas_red"/>
+                    android:textColor="@color/trabas_black"/>
 
                 <RelativeLayout
-                    android:id="@+id/search_destinantion"
+                    android:id="@+id/search_destination"
                     android:layout_width="300dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="35dp"
                     android:layout_below="@id/halo_user"
                     android:layout_marginTop="10dp"
                     android:layout_alignStart="@id/halo_user"
@@ -71,12 +70,13 @@
                     android:background="@drawable/shape_background_appbar">
 
                     <TextView
+                        android:id="@+id/tv_destinationSearch"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
-                        android:text="Purwokerto Selatan"
-                        android:textSize="25sp"
-                        android:textAlignment="center"
+                        android:layout_centerVertical="true"
+                        android:text="Baturaden"
+                        android:textSize="20sp"
                         android:fontFamily="@font/font_quan_rounded_regular"/>
                     <ImageView
                         android:layout_width="wrap_content"
@@ -112,15 +112,18 @@
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 android:text="Lakukan perjalanan dengan mudah, Ayo isi saldo kamu sekarang!"
+                android:textSize="12sp"
                 android:layout_centerHorizontal="true"
                 android:justificationMode="inter_word"
                 android:background="@drawable/shape_background_notif_home"/>
 
             <LinearLayout
                 android:id="@+id/saldo_bar"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
                 android:layout_alignStart="@id/notif_banner"
                 android:layout_alignEnd="@id/notif_banner"
                 android:layout_below="@id/notif_banner"
@@ -129,8 +132,9 @@
 
                 <LinearLayout
                     android:id="@+id/saldo"
-                    android:layout_width="114dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
                     android:orientation="vertical"
                     android:background="@drawable/shape_border_saldo">
 
@@ -138,21 +142,23 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Saldo"
-                        android:textSize="25sp"
+                        android:textSize="20sp"
                         android:fontFamily="@font/font_quan_rounded_regular"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
                         android:text="Rp 0"
-                        android:textSize="28sp"
+                        android:textSize="20sp"
                         android:fontFamily="@font/font_quan_rounded_regular"/>
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/poin"
-                    android:layout_width="114dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
                     android:layout_marginStart="10dp"
                     android:orientation="vertical"
                     android:background="@drawable/shape_border_saldo">
@@ -161,21 +167,23 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Poin"
-                        android:textSize="25sp"
+                        android:textSize="20sp"
                         android:fontFamily="@font/font_quan_rounded_regular"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
                         android:text="0"
-                        android:textSize="28sp"
+                        android:textSize="20sp"
                         android:fontFamily="@font/font_quan_rounded_regular"/>
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/history"
-                    android:layout_width="107dp"
-                    android:layout_height="64dp"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
                     android:layout_marginStart="10dp"
                     android:gravity="center"
                     android:orientation="vertical"
@@ -184,17 +192,17 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Riwayat"
+                        android:text="Riwayat\nTransaksi"
                         android:textAlignment="center"
                         android:textSize="20sp"
                         android:fontFamily="@font/font_quan_rounded_regular"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Transaksi"
-                        android:textAlignment="center"
-                        android:textSize="20sp"
-                        android:fontFamily="@font/font_quan_rounded_regular"/>
+<!--                    <TextView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Transaksi"-->
+<!--                        android:textAlignment="center"-->
+<!--                        android:textSize="20sp"-->
+<!--                        android:fontFamily="@font/font_quan_rounded_regular"/>-->
 
                 </LinearLayout>
 
@@ -212,39 +220,58 @@
                 android:textSize="25sp"
                 android:textColor="@color/trabas_black"
                 android:fontFamily="@font/font_quan_rounded_regular" />
-            <ImageView
-                android:id="@+id/map"
-                android:layout_width="wrap_content"
-                android:layout_height="200dp"
+
+            <FrameLayout
+                android:id="@+id/frame_mapView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_below="@id/halte_terdekat"
-                android:layout_marginTop="20dp"
                 android:layout_alignStart="@id/halte_terdekat"
-                android:layout_alignEnd="@id/saldo_bar"
-                android:background="@drawable/ic_launcher_background"/>
+                android:layout_alignEnd="@id/saldo_bar">
+
+                <org.osmdroid.views.MapView
+                    android:id="@+id/mapView_halte_nearby"
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/ic_launcher_background"/>
+
+                <ImageButton
+                    android:id="@+id/ib_refresh_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:layout_gravity="bottom|end"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_find_my_location"/>
+
+            </FrameLayout>
 
             <TextView
                 android:id="@+id/rekomendasi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/map"
-                android:layout_alignStart="@id/map"
+                android:layout_below="@id/frame_mapView"
+                android:layout_alignStart="@id/frame_mapView"
                 android:layout_marginTop="20dp"
                 android:text="Destinasi Wisata Banyumas"
                 android:textStyle="bold"
                 android:textSize="25sp"
                 android:textColor="@color/trabas_black"
                 android:fontFamily="@font/font_quan_rounded_regular" />
-            <ImageView
-                android:id="@+id/gambar_destinasi"
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager_destinasi"
                 android:layout_width="wrap_content"
                 android:layout_height="200dp"
                 android:layout_below="@id/rekomendasi"
                 android:layout_marginTop="20dp"
-                android:layout_alignStart="@id/map"
-                android:layout_alignEnd="@id/map"
+                android:layout_marginBottom="100dp"
+                android:layout_alignStart="@id/frame_mapView"
+                android:layout_alignEnd="@id/frame_mapView"
                 android:background="@drawable/ic_launcher_background"/>
 
-        </RelativeLayout>
+    </RelativeLayout>
 
     </androidx.core.widget.NestedScrollView>
 

@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
 
         makeCurrentFragment(HomeFragment())
 
+        // Bottom Navibar
         bottomNavbar.setOnItemSelectedListener {
             item ->
             when (item.itemId) {
@@ -47,6 +48,7 @@ class MainActivity : AppCompatActivity() {
         fragmentTransaction.commit()
     }
 
+    // Scan Fragment
     private fun showBottomDialog() {
         val dialog = Dialog(this)
 
