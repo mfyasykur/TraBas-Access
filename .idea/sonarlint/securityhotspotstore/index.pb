@@ -19,10 +19,6 @@ H
 app/google-services.json,f\d\fd8d34b142d02ec743a8efefefd2c097961666e9
 F
 app/proguard-rules.pro,9\e\9e08934d811afe28fbc77aaa3c0d747b94348db9
-<
-build.gradle,f\0\f07866736216be0ee2aba49e392191aeae700a35
-P
- app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
 k
 ;app/src/main/java/com/ppb/trabas_access/RegisterActivity.kt,5\2\5220872c118e0d2ac0bf3221e61d7bc05526d205
 h
@@ -30,13 +26,15 @@ h
 :
 
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
-@
-app/build.gradle,f\4\f4a01d6a4fcb971362ec00a83903fd3902f52164
 g
 7app/src/main/java/com/ppb/trabas_access/MainActivity.kt,b\1\b1911d40d2ac9f681a0a4ec2dfc8673662323640
-p
-@app/src/main/java/com/ppb/trabas_access/model/dao/Destination.kt,5\f\5f30620feb7bc0d3ed2ff453e3155ab8a2faa4a0
+A
+gradle.properties,2\a\2afbb999f001938c88fa43fc2ef52abf0f8213e4
+X
+(gradle/wrapper/gradle-wrapper.properties,f\b\fbe448ebfc3eb2d4e308f6b8b043666f5b57235e
 j
 :app/src/main/java/com/ppb/trabas_access/model/dao/Users.kt,4\e\4e462a5159b7cd7d4b9299a86987d4e3a1b00a63
-q
-Aapp/src/main/java/com/ppb/trabas_access/fragments/HomeFragment.kt,3\4\34160086f68f1b3aa70e04cc4307d794dd3fb066
+<
+build.gradle,f\0\f07866736216be0ee2aba49e392191aeae700a35
+P
+ app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
