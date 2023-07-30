@@ -9,12 +9,8 @@ u
 Eapp/src/main/java/com/ppb/trabas_access/fragments/ScheduleFragment.kt,5\8\58cce43f15652f4ebe0506d1018ab3409b11afca
 t
 Dapp/src/main/java/com/ppb/trabas_access/fragments/ProfileFragment.kt,3\9\390fb0a474436cef2610e37c7929e99e72eddd2c
-?
-settings.gradle,0\5\05efc8b1657769a27696d478ded1e95f38737233
 q
 Aapp/src/main/java/com/ppb/trabas_access/fragments/ScanFragment.kt,2\6\26422510b298d316f0cdf39029e44bc83213f35b
-r
-Bapp/src/main/java/com/ppb/trabas_access/fragments/RouteFragment.kt,9\8\98ed0bd6cc73fe30418c43acd037b7321b4e577a
 H
 app/google-services.json,f\d\fd8d34b142d02ec743a8efefefd2c097961666e9
 F
@@ -28,11 +24,7 @@ h
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
 g
 7app/src/main/java/com/ppb/trabas_access/MainActivity.kt,b\1\b1911d40d2ac9f681a0a4ec2dfc8673662323640
-A
-gradle.properties,2\a\2afbb999f001938c88fa43fc2ef52abf0f8213e4
 X
 (gradle/wrapper/gradle-wrapper.properties,f\b\fbe448ebfc3eb2d4e308f6b8b043666f5b57235e
 j
 :app/src/main/java/com/ppb/trabas_access/model/dao/Users.kt,4\e\4e462a5159b7cd7d4b9299a86987d4e3a1b00a63
-<
-build.gradle,f\0\f07866736216be0ee2aba49e392191aeae700a35
