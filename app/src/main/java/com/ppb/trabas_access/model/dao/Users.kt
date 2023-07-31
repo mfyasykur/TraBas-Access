@@ -4,5 +4,7 @@ data class Users(
     var fullname: String? = null,
     var email: String? = null,
     var phone: String? = null,
-    var password: String? = null
+    var password: String? = null,
+    var balance: Long? = null,
+    var point: Int? = null
 )

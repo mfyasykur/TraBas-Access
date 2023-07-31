@@ -43,7 +43,7 @@ class RegisterActivity : AppCompatActivity() {
                             val userId = currentUser?.uid
 
                             val userRef = database.getReference("users")
-                            val user = Users(fullname, email, phone, password)
+                            val user = Users(fullname, email, phone, password, 0, 0)
 
                             if (userId != null) {
                                 userRef.child(userId).setValue(user)
