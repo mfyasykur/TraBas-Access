@@ -9,4 +9,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="scan_to_pay">Scan to Pay</string>
     <string name="notification_button">Notification</string>
+    <string name="hello_user">Halo, %1$s\nMau jalan-jalan kemana nih?</string>
+    <string name="missing_phone_notification">Mohon lengkapi profil Anda!</string>
+    <string name="add_phone_button">Tambahkan No. Handphone</string>
 </resources>
