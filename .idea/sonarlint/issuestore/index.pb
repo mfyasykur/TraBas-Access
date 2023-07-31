@@ -13,8 +13,6 @@ H
 app/google-services.json,f\d\fd8d34b142d02ec743a8efefefd2c097961666e9
 F
 app/proguard-rules.pro,9\e\9e08934d811afe28fbc77aaa3c0d747b94348db9
-k
-;app/src/main/java/com/ppb/trabas_access/RegisterActivity.kt,5\2\5220872c118e0d2ac0bf3221e61d7bc05526d205
 h
 8app/src/main/java/com/ppb/trabas_access/LoginActivity.kt,6\1\610078275b8d92280ca4b1565f8bbb67cc6a31e5
 :
