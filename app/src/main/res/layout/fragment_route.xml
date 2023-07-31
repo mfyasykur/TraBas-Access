@@ -1,87 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragments.RouteFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="65dp"
-            android:layout_weight="1"
-            android:gravity="center"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <!-- Informasi Peta Utama -->
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:background="@drawable/border"
                 android:text="PETA UTAMA"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
-            <ImageView
-                android:id="@+id/route"
+            <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/main_route"
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
-                android:paddingBottom="10dp"
-                android:src="@raw/map_trabas" />
+                android:paddingBottom="10dp" />
 
+            <!-- Informasi Koridor 1 -->
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:background="@drawable/border"
                 android:text="Koridor 1"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="20dp"
-                android:textStyle="bold" />
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp" />
 
-            <ImageView
+            <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/koridor1"
                 android:layout_width="match_parent"
                 android:layout_height="400dp"
-                android:paddingBottom="5dp"
-                android:src="@raw/koridor1" />
+                android:paddingBottom="5dp" />
 
+            <!-- Informasi Koridor 2 -->
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:background="@drawable/border"
                 android:text="Koridor 2"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="20dp"
-                android:textStyle="bold" />
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp" />
 
-            <ImageView
+            <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/koridor2"
                 android:layout_width="match_parent"
                 android:layout_height="400dp"
-                android:src="@raw/koridor2"
-                android:paddingBottom="20dp"/>
+                android:paddingBottom="20dp" />
 
+            <!-- Informasi Koridor 3 -->
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:background="@drawable/border"
                 android:text="Koridor 3"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="20dp"
-                android:textStyle="bold" />
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp" />
 
-            <ImageView
+            <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/koridor3"
                 android:layout_width="match_parent"
                 android:layout_height="400dp"
-                android:src="@raw/koridor3"
-                android:paddingBottom="25dp"/>
+                android:layout_marginBottom="10dp"
+                android:paddingBottom="25dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="100dp"
+                android:layout_marginStart="10dp"
+                android:text="Sumber: temanbus.com"/>
 
         </LinearLayout>
-    </ScrollView>
-</FrameLayout>
+
+</ScrollView>

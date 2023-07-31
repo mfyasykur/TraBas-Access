@@ -19,4 +19,19 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!-- Tambahkan style untuk ImageViewerDialog -->
+    <style name="ImageViewerDialogStyle" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@style/ImageViewerDialogAnimation</item>
+    </style>
+
+    <!-- Animasi masuk/keluar untuk dialog -->
+    <style name="ImageViewerDialogAnimation">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+
 </resources>
