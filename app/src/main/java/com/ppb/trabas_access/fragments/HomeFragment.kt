@@ -355,23 +355,6 @@ class HomeFragment : Fragment() {
         }
     }
 
-//    private val carouselPageChangeListener = object : ViewPager.OnPageChangeListener {
-//        override fun onPageScrollStateChanged(state: Int) {}
-//
-//        override fun onPageScrolled(
-//            position: Int,
-//            positionOffset: Float,
-//            positionOffsetPixels: Int
-//        ) {}
-//
-//        override fun onPageSelected(position: Int) {
-//            // Ketika mencapai halaman terakhir, atur halaman pertama sebagai halaman berikutnya
-//            if (position == carouselImages.size - 1) {
-//                binding.viewPagerDestinasi.setCurrentItem(0, false)
-//            }
-//        }
-//    }
-
     private fun fetchCarouselImages() {
 
         destinationRef.addValueEventListener(object : ValueEventListener {
