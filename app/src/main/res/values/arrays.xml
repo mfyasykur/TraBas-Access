@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="corridor_array">
+        <item>Koridor 2A</item>
+        <item>Koridor 2B</item>
+        <item>Koridor 3A</item>
+        <item>Koridor 3B</item>
+    </string-array>
+</resources>
