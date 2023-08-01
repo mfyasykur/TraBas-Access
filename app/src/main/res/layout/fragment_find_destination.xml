@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/border"
+        android:padding="10dp"
+        android:text="TEMUKAN RUTE"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <!-- Lokasi Awal -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_lokasi_awal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:boxBackgroundColor="@null"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeWidthFocused="2dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_lokasi_awal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_start_location"
+            android:drawablePadding="10dp"
+            android:inputType="text"
+            android:padding="8dp"
+            android:hint="Titik Awal"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Lokasi Tujuan -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_lokasi_tujuan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:boxBackgroundColor="@null"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeWidthFocused="2dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_lokasi_tujuan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_destination_location"
+            android:drawablePadding="10dp"
+            android:inputType="text"
+            android:padding="8dp"
+            android:hint="Titik Tujuan"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Button Cari dan Hasil Pencarian -->
+    <Button
+        android:id="@+id/btn_cari"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/trabas_red"
+        android:text="Cari"
+        android:textSize="16sp" />
+
+    <GridLayout
+        android:id="@+id/grid_result_halte"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:columnCount="2"
+        android:rowCount="3"
+        android:orientation="horizontal">
+
+        <!-- Row 1 -->
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/ic_bus_stop_red" />
+        <TextView
+            android:id="@+id/tv_start_halte"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:layout_rowSpan="1"
+            android:layout_columnSpan="1"/>
+
+        <!-- Row 2 -->
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/ic_connecting_line"
+            android:layout_rowSpan="1"
+            android:layout_columnSpan="1"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_rowSpan="1"
+            android:layout_columnSpan="1"/>
+
+        <!-- Row 3 -->
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_bus_stop_red"
+            android:layout_rowSpan="1"
+            android:layout_columnSpan="1"/>
+        <TextView
+            android:id="@+id/tv_destination_halte"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:layout_rowSpan="1"
+            android:layout_columnSpan="1"/>
+
+    </GridLayout>
+
+    <GridLayout
+        android:id="@+id/grid_result_halte2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Row 4 -->
+        <TextView
+            android:id="@+id/tv_distance_est"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:textSize="14sp"/>
+        <TextView
+            android:id="@+id/tv_time_est"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:textSize="14sp"/>
+
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/tv_hasil"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:text="Rute tidak ditemukan"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="200dp"/>
+
+</LinearLayout>
