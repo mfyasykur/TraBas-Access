@@ -46,7 +46,7 @@ class HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
     private lateinit var usersRef: DatabaseReference
     private lateinit var destinationRef: DatabaseReference
-    private lateinit var koridor3b: DatabaseReference
+    private lateinit var koridorRef: DatabaseReference
     private lateinit var helloUSerEventListener: ValueEventListener
     private lateinit var textCarouselRunnable: CarouselRunnable
     private lateinit var mapView: MapView
@@ -55,7 +55,7 @@ class HomeFragment : Fragment() {
     private val carouselHandler = Handler(Looper.getMainLooper())
     private val carouselTextList: MutableList<Destination> = mutableListOf()
     private var carouselImages: MutableList<Destination> = mutableListOf()
-    private val koridor3bList: MutableList<Koridor> = mutableListOf()
+    private val koridorList: MutableList<Koridor> = mutableListOf()
     private var currentIndex = 0
     private val locationPermissionCode = 123
 
@@ -119,6 +119,16 @@ class HomeFragment : Fragment() {
         val intervalDuration = 5000L
 
         startTextCarouselAnimation(intervalDuration)
+
+        // find destination
+        binding.searchDestination.setOnClickListener {
+            val findDestinationFragment = FindDestinationFragment()
+            parentFragmentManager
+                .beginTransaction()
+                .replace(R.id.frame_navbar, findDestinationFragment)
+                .addToBackStack(null)
+                .commit()
+        }
 
         // Map
         setupMap()
@@ -211,11 +221,11 @@ class HomeFragment : Fragment() {
         mapView.controller.setCenter(startPoint)
         mapView.controller.setZoom(zoomLevel)
 
-        koridor3b = FirebaseDatabase.getInstance().reference.child("koridor3b")
+        koridorRef = FirebaseDatabase.getInstance().reference.child("koridor3b")
 
-        koridor3b.addValueEventListener(object : ValueEventListener {
+        koridorRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-                koridor3bList.clear()
+                koridorList.clear()
 
                 for (koridorSnapshot in snapshot.children) {
                     val name = koridorSnapshot.child("name").getValue(String::class.java)
@@ -224,7 +234,7 @@ class HomeFragment : Fragment() {
 
                     if (name != null && latitude != null && longitude != null) {
                         val koridor = Koridor(name, latitude, longitude)
-                        koridor3bList.add(koridor)
+                        koridorList.add(koridor)
                     }
                 }
 
@@ -268,7 +278,7 @@ class HomeFragment : Fragment() {
 
     private fun markNearestHalteAndCurrentLocation(currentLatitude: Double, currentLongitude: Double) {
 
-        val (nearestHalte, nearestDistance) = findNearestHalte(currentLatitude, currentLongitude, koridor3bList)
+        val (nearestHalte, nearestDistance) = findNearestHalte(currentLatitude, currentLongitude, koridorList)
 
         val markerPoints = mutableListOf<GeoPoint>()
 
@@ -345,19 +355,6 @@ class HomeFragment : Fragment() {
         }
     }
 
-//    private val imageCarouselRunnable = object : Runnable {
-//        override fun run() {
-//            var currentPosition = binding.viewPagerDestinasi.currentItem
-//            if (currentPosition == carouselImages.size - 1) {
-//                currentPosition = 0
-//            } else {
-//                currentPosition++
-//            }
-//            binding.viewPagerDestinasi.setCurrentItem(currentPosition, true)
-//            carouselHandler.postDelayed(this, 5000)
-//        }
-//    }
-
 //    private val carouselPageChangeListener = object : ViewPager.OnPageChangeListener {
 //        override fun onPageScrollStateChanged(state: Int) {}
 //
@@ -391,7 +388,7 @@ class HomeFragment : Fragment() {
                     }
                 }
 
-                carouselAdapter = CarouselAdapter(carouselImages, binding.viewPagerDestinasi)
+                carouselAdapter = CarouselAdapter(parentFragmentManager, carouselImages, binding.viewPagerDestinasi)
                 binding.viewPagerDestinasi.adapter = carouselAdapter
                 startCarouselAutoScroll()
             }
