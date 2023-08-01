@@ -39,8 +39,7 @@
                     android:layout_gravity="end"
                     android:src="@drawable/ic_notification"
                     android:contentDescription="@string/notification_button"
-                    android:background="?attr/selectableItemBackgroundBorderless"
-                    android:onClick="onNotificationButtonClicked" />
+                    android:background="?attr/selectableItemBackgroundBorderless"/>
 
             </androidx.appcompat.widget.Toolbar>
 
