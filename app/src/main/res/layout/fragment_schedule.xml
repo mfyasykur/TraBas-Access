@@ -24,8 +24,14 @@
             android:textAlignment="center"
             android:textColor="@color/white"
             android:background="@drawable/border"
-            android:textStyle="bold">
-        </TextView>
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Koridor 3B"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="5dp"/>
 
 <!--        Implementasi Filtering-->
 <!--        <Spinner-->
