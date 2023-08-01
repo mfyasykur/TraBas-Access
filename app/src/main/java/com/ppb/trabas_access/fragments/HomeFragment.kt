@@ -20,8 +20,6 @@ import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
-import androidx.viewpager.widget.ViewPager
-import androidx.viewpager2.widget.ViewPager2
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import com.google.firebase.auth.FirebaseAuth
@@ -33,7 +31,6 @@ import com.google.firebase.database.ValueEventListener
 import com.ppb.trabas_access.R
 import com.ppb.trabas_access.adapter.CarouselAdapter
 import com.ppb.trabas_access.databinding.FragmentHomeBinding
-import com.ppb.trabas_access.model.dao.CarouselImage
 import com.ppb.trabas_access.model.dao.Destination
 import com.ppb.trabas_access.model.dao.Koridor
 import com.ppb.trabas_access.model.dao.Users

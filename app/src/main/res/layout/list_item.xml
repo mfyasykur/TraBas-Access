@@ -12,36 +12,38 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
-        android:padding="8dp"
         android:layout_margin="5dp">
 
 
         <ImageView
-            android:id="@+id/logo_bus"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:src="@drawable/ic_launcher_background"
+            android:id="@+id/iv_logo_bus"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_bus_stop_red"
             android:layout_margin="5dp"/>
 
         <TextView
-            android:id="@+id/nama_tujuan"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="Tujuan"
-            android:textSize="20sp"
-            android:textStyle="bold"
+            android:id="@+id/tv_halte_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:text="Halte IT Telkom Purwokerto"
             android:textColor="@color/black"
-            android:paddingLeft="10dp"
-            android:gravity="center"/>
+            android:textSize="15sp"
+            android:textStyle="bold" />
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="08.30"
-            android:layout_gravity="center"
-            android:gravity="right"
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:gravity="center_vertical|end"
+            android:text="08:30"
             android:textColor="@color/black"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:textStyle="bold" />
 
     </LinearLayout>

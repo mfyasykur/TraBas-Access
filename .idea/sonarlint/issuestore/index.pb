@@ -5,8 +5,6 @@ r
 Bapp/src/main/java/com/ppb/trabas_access/fragments/TarifFragment.kt,6\a\6a6033b89f0f7386f28c7564e769f3068e86e127
 i
 9app/src/main/java/com/ppb/trabas_access/SplashActivity.kt,0\6\060eb8e5363866fd1a551f9be7f61f0470c73933
-u
-Eapp/src/main/java/com/ppb/trabas_access/fragments/ScheduleFragment.kt,5\8\58cce43f15652f4ebe0506d1018ab3409b11afca
 q
 Aapp/src/main/java/com/ppb/trabas_access/fragments/ScanFragment.kt,2\6\26422510b298d316f0cdf39029e44bc83213f35b
 H
