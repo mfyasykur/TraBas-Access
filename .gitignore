@@ -145,3 +145,5 @@ hs_err_pid*
 /.idea/sonarlint/
 /.idea/sonarlint/securityhotspotstore/index.pb
 /.idea/sonarlint/issuestore/index.pb
+
+/apk

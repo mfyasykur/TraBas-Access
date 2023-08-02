@@ -9,9 +9,6 @@ F
 app/proguard-rules.pro,9\e\9e08934d811afe28fbc77aaa3c0d747b94348db9
 k
 ;app/src/main/java/com/ppb/trabas_access/RegisterActivity.kt,5\2\5220872c118e0d2ac0bf3221e61d7bc05526d205
-:
-
-.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
 X
 (gradle/wrapper/gradle-wrapper.properties,f\b\fbe448ebfc3eb2d4e308f6b8b043666f5b57235e
 @
