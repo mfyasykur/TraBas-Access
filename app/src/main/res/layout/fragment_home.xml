@@ -191,6 +191,7 @@
                     android:background="@drawable/shape_border_saldo">
 
                     <TextView
+                        android:id="@+id/tv_trans_history"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Riwayat\nTransaksi"

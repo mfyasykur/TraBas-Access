@@ -40,12 +40,6 @@ class LoginActivity : AppCompatActivity() {
             }
         }
 
-        val btnLoginAsDeveloper = binding.tvDevelopMode
-        btnLoginAsDeveloper.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-        }
-
         val btnDaftar = binding.tvRegisterButton
         btnDaftar.setOnClickListener {
             val intent = Intent(this, RegisterActivity::class.java)
