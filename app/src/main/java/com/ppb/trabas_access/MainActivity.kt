@@ -13,6 +13,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.ppb.trabas_access.fragments.HomeFragment
 import com.ppb.trabas_access.fragments.ProfileFragment
 import com.ppb.trabas_access.fragments.RouteFragment
+import com.ppb.trabas_access.fragments.ScanFragment
 import com.ppb.trabas_access.fragments.ScheduleFragment
 
 class MainActivity : AppCompatActivity() {
@@ -26,6 +27,7 @@ class MainActivity : AppCompatActivity() {
 
         makeCurrentFragment(HomeFragment())
 
+        // Bottom Navibar
         bottomNavbar.setOnItemSelectedListener {
             item ->
             when (item.itemId) {
@@ -47,22 +49,14 @@ class MainActivity : AppCompatActivity() {
         fragmentTransaction.commit()
     }
 
+    // Scan Fragment
     private fun showBottomDialog() {
-        val dialog = Dialog(this)
-
-        dialog.setContentView(R.layout.bottom_sheet_scan_bar)
-
-        dialog.window?.apply {
-            setLayout(
-                ViewGroup.LayoutParams.MATCH_PARENT,
-                ViewGroup.LayoutParams.WRAP_CONTENT
-            )
-            setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-            attributes.windowAnimations = R.style.DialogAnimation
-            setGravity(Gravity.BOTTOM)
-        }
-
-        dialog.show()
+        val scanFragment = ScanFragment()
+        val fragmentManager = supportFragmentManager
+        val fragmentTransaction = fragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.frame_navbar, scanFragment)
+        fragmentTransaction.addToBackStack(null) // Tambahkan fragment ke back stack agar dapat kembali ke fragment sebelumnya
+        fragmentTransaction.commit()
     }
 
 }

@@ -7,100 +7,193 @@
     tools:context=".LoginActivity">
 
     <ImageView
-        android:id="@+id/logo2"
+        android:id="@+id/iv_register_logo"
         android:layout_width="250dp"
         android:layout_height="250dp"
         android:layout_centerHorizontal="true"
         android:src="@raw/logo_trabas1" />
 
-    <EditText
-        android:id="@+id/namaLengkap"
+<!--    <EditText-->
+<!--        android:id="@+id/namaLengkap"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/logo2"-->
+<!--        android:layout_marginTop="30dp"-->
+<!--        android:layout_marginStart="30dp"-->
+<!--        android:layout_marginEnd="30dp"-->
+<!--        android:drawableLeft="@drawable/ic_person"-->
+<!--        android:drawablePadding="20dp"-->
+<!--        android:hint="Nama Lengkap"-->
+<!--        android:inputType="textPersonName"-->
+<!--        android:padding="10dp"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textColorHint="@color/darkgrey"/>-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/EmailnomorTelepon"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/namaLengkap"-->
+<!--        android:layout_marginStart="30dp"-->
+<!--        android:layout_marginEnd="30dp"-->
+<!--        android:drawableLeft="@drawable/ic_email"-->
+<!--        android:drawablePadding="20dp"-->
+<!--        android:hint="Email / Nomor Telepon"-->
+<!--        android:inputType="textEmailAddress|phone"-->
+<!--        android:padding="10dp"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textColorHint="@color/darkgrey" />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/pw"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/EmailnomorTelepon"-->
+<!--        android:layout_marginStart="30dp"-->
+<!--        android:layout_marginEnd="30dp"-->
+<!--        android:drawableLeft="@drawable/ic_lock"-->
+<!--        android:drawablePadding="20dp"-->
+<!--        android:hint="Kata Sandi"-->
+<!--        android:inputType="textPassword"-->
+<!--        android:padding="10dp"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textColorHint="@color/darkgrey"/>-->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fieldlayout_fullname_register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/logo2"
-        android:layout_marginTop="30dp"
+        android:layout_below="@id/iv_register_logo"
+        android:layout_marginTop="10dp"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-        android:drawableLeft="@drawable/ic_person"
-        android:drawablePadding="20dp"
-        android:hint="Nama Lengkap"
-        android:inputType="textPersonName"
-        android:padding="10dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/darkgrey" />
+        app:boxBackgroundColor="@null"
+        app:boxStrokeColor="@color/teal_200"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeWidthFocused="2dp">
 
-    <EditText
-        android:id="@+id/EmailnomorTelepon"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/field_fullname_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_person"
+            android:drawablePadding="20dp"
+            android:hint="Nama Lengkap"
+            android:autofillHints="name"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fieldlayout_email_reg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/namaLengkap"
+        android:layout_below="@id/fieldlayout_fullname_register"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-        android:drawableLeft="@drawable/ic_email"
-        android:drawablePadding="20dp"
-        android:hint="Email / Nomor Telepon"
-        android:inputType="textEmailAddress|phone"
-        android:padding="10dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/darkgrey" />
+        app:boxBackgroundColor="@null"
+        app:boxStrokeColor="@color/teal_200"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeWidthFocused="2dp">
 
-    <EditText
-        android:id="@+id/pw"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/field_email_reg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_email"
+            android:drawablePadding="20dp"
+            android:hint="Email"
+            android:padding="10dp"
+            android:textColor="@color/black"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fieldlayout_password_reg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/EmailnomorTelepon"
+        android:layout_below="@id/fieldlayout_email_reg"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-        android:drawableLeft="@drawable/ic_lock"
-        android:drawablePadding="20dp"
-        android:hint="Kata Sandi"
-        android:inputType="textPassword"
-        android:padding="10dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/darkgrey"/>
+        app:passwordToggleEnabled="true"
+        app:boxBackgroundColor="@null"
+        app:boxStrokeColor="@color/teal_200"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeWidthFocused="2dp">
 
-    <TextView
-        android:id="@+id/LupaPW"
-        android:layout_width="wrap_content"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/field_password_reg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_lock"
+            android:drawablePadding="20dp"
+            android:hint="Kata Sandi"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textColor="@color/black"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fieldlayout_confirm_password"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/pw"
-        android:layout_alignEnd="@id/pw"
-        android:text="Lupa Kata Sandi?"
-        android:textColor="@color/black"
-        android:textSize="12sp" />
+        android:layout_below="@id/fieldlayout_password_reg"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        app:passwordToggleEnabled="true"
+        app:boxBackgroundColor="@null"
+        app:boxStrokeColor="@color/teal_200"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeWidthFocused="2dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/field_confirm_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_lock"
+            android:drawablePadding="20dp"
+            android:hint="Konfirmasi Kata Sandi"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textColor="@color/black"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnRegister"
+        android:id="@+id/btn_register"
         style="@style/BtnLogin"
-        android:text="daftar"
+        android:text="Daftar"
         android:backgroundTint="@color/btn_press"
-        android:layout_below="@id/LupaPW"
+        android:layout_below="@id/fieldlayout_confirm_password"
         android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"/>
 
     <RelativeLayout
-        android:id="@+id/belumPunya"
+        android:id="@+id/lay_already_have_acc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:gravity="center_horizontal"
-        android:layout_below="@id/btnRegister">
+        android:layout_below="@id/btn_register">
 
     <TextView
-        android:id="@+id/sudahAda2"
+        android:id="@+id/tv_already_have_acc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
         android:text="Sudah Punya Akun?"
         android:layout_centerHorizontal="true"
         android:textColor="@color/black"
         android:textSize="12sp"/>
 
     <TextView
-        android:id="@+id/masuk2"
+        android:id="@+id/tv_login_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/sudahAda2"
+        android:layout_toEndOf="@id/tv_already_have_acc"
         android:text=" Masuk"
         android:textColor="@color/link"
         android:textStyle="bold"
@@ -109,49 +202,47 @@
         android:focusable="true"/>
     </RelativeLayout>
 
-    <TextView
-        style="@style/EditTextLogin"
-        android:layout_width="match_parent"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="10dp"
-        android:layout_below="@id/belumPunya"
-        android:gravity="center"
-        android:text="atau masuk dengan"
-        android:textSize="12dp" />
+<!--    <TextView-->
+<!--        android:id="@+id/tv_loginwith_reg"-->
+<!--        style="@style/EditTextLogin"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginEnd="20dp"-->
+<!--        android:layout_below="@id/lay_already_have_acc"-->
+<!--        android:gravity="center"-->
+<!--        android:text="atau masuk dengan"-->
+<!--        android:textSize="12sp" />-->
 
-    <LinearLayout
-        android:id="@+id/socialicons"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="600dp"
-        android:gravity="center">
+<!--    <LinearLayout-->
+<!--        android:id="@+id/lay_login_methods_reg"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/tv_loginwith_reg"-->
+<!--        android:gravity="center">-->
 
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_margin="20dp"
-            android:src="@raw/google" />
+<!--        <ImageView-->
+<!--            android:id="@+id/iv_google_reg"-->
+<!--            android:layout_width="30dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:layout_marginEnd="20dp"-->
+<!--            android:src="@raw/google"/>-->
 
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
-            android:src="@raw/facebook" />
-    </LinearLayout>
+<!--        <ImageView-->
+<!--            android:id="@+id/iv_facebook_reg"-->
+<!--            android:layout_width="30dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:src="@raw/facebook" />-->
+<!--    </LinearLayout>-->
 
     <TextView
-        android:id="@+id/kebijakan"
+        android:id="@+id/tv_policy_agreement_reg"
         android:layout_width="360dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/socialicons"
-        android:layout_marginTop="13dp"
+        android:layout_below="@id/lay_already_have_acc"
         android:layout_centerInParent="true"
+        android:layout_marginTop="40dp"
         android:text="Dengan mendaftar, Anda menyetujui Ketentuan Layanan kami dan mengakui bahwa Kebijakan Privasi kami berlaku untuk Anda."
         android:textAlignment="center"
-        android:textSize="11sp"/>
+        android:textSize="11sp" />
 
 </RelativeLayout>

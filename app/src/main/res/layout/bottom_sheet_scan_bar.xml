@@ -12,9 +12,9 @@
         android:layout_height="match_parent"
         android:paddingTop="100dp"
         android:paddingBottom="50dp"
-        android:text="[Fitur dalam pengembangan]"
+        android:text="Harga Tiket Trans Banyumas:\n\nRp. 3.900"
         android:gravity="center"
-        android:textSize="15sp"
+        android:textSize="20sp"
         android:textColor="@color/trabas_black" />
 
 </LinearLayout>

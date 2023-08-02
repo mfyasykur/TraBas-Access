@@ -20,4 +20,6 @@
     <color name="trabas_gray">#C9C9C9</color>
     <color name="link">#0645AD</color>
     <color name="lightgrey">#A6A6A6</color>
+    <color name="button_hover_color">#000000</color>
+    <color name="button_normal_color">#474747</color>
 </resources>
