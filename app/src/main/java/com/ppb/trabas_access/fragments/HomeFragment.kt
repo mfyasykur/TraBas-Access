@@ -40,6 +40,8 @@ import org.osmdroid.util.BoundingBox
 import org.osmdroid.util.GeoPoint
 import org.osmdroid.views.MapView
 import org.osmdroid.views.overlay.Marker
+import java.text.NumberFormat
+import java.util.Locale
 
 class HomeFragment : Fragment() {
 
@@ -140,6 +142,9 @@ class HomeFragment : Fragment() {
 
         // Destination Image Carousel
         fetchCarouselImages()
+
+        // User Balance & Point
+        fetchUserBalance()
     }
 
     // Fetch Destination Texts
@@ -393,6 +398,37 @@ class HomeFragment : Fragment() {
             }
         }
         carouselHandler.postDelayed(imageCarouselRunnable, 6000)
+    }
+
+    private fun fetchUserBalance() {
+        // Ambil data user dari database
+        val currentUser = FirebaseAuth.getInstance().currentUser
+        currentUser?.uid?.let { userId ->
+            usersRef.child(userId).addValueEventListener(object : ValueEventListener {
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    val user = snapshot.getValue(Users::class.java)
+                    user?.let {
+                        // Format angka saldo menggunakan titik sebagai pemisah ribuan
+                        val formattedBalance = it.balance?.let { it1 -> formatCurrency(it1) }
+
+                        // Set nilai saldo dan poin ke TextView
+                        binding.tvBalanceValue.text = "Rp $formattedBalance"
+                        binding.tvPointValue.text = it.point.toString()
+                    }
+                }
+
+                override fun onCancelled(error: DatabaseError) {
+                    // Handle error jika terjadi error pada database
+                    Toast.makeText(requireContext(), "Error: ${error.message}", Toast.LENGTH_SHORT).show()
+                }
+            })
+        }
+    }
+
+    private fun formatCurrency(amount: Long): String {
+        val numberFormat = NumberFormat.getNumberInstance(Locale.getDefault())
+        numberFormat.maximumFractionDigits = 0
+        return numberFormat.format(amount)
     }
 
     override fun onResume() {

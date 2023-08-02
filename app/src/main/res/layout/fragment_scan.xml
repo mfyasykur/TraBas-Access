@@ -1,14 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".fragments.ScanFragment">
+    android:layout_height="match_parent">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <!-- SurfaceView atau TextureView untuk menampilkan preview kamera -->
+    <SurfaceView
+        android:id="@+id/surfaceView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent" />
 
-</FrameLayout>
+    <!-- Overlay untuk menampilkan bounding box pada QR Code yang terdeteksi -->
+    <FrameLayout
+        android:id="@+id/qrCodeOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- ImageView untuk menampilkan frame QR Code -->
+        <ImageView
+            android:id="@+id/qrCodeFrame"
+            android:layout_width="365dp"
+            android:layout_height="365dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="50dp"
+            android:src="@drawable/frame_qr_code" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="500dp"
+            android:text="Harga Tiket Trans Banyumas:\n\nRp. 3.900"
+            android:gravity="center_horizontal"
+            android:textSize="20sp"
+            android:background="@drawable/dialog_scan_bar"
+            android:textColor="@color/trabas_black" />
+
+    </FrameLayout>
+
+</RelativeLayout>

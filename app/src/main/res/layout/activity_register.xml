@@ -202,43 +202,43 @@
         android:focusable="true"/>
     </RelativeLayout>
 
-    <TextView
-        android:id="@+id/tv_loginwith_reg"
-        style="@style/EditTextLogin"
-        android:layout_width="match_parent"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_below="@id/lay_already_have_acc"
-        android:gravity="center"
-        android:text="atau masuk dengan"
-        android:textSize="12sp" />
+<!--    <TextView-->
+<!--        android:id="@+id/tv_loginwith_reg"-->
+<!--        style="@style/EditTextLogin"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginEnd="20dp"-->
+<!--        android:layout_below="@id/lay_already_have_acc"-->
+<!--        android:gravity="center"-->
+<!--        android:text="atau masuk dengan"-->
+<!--        android:textSize="12sp" />-->
 
-    <LinearLayout
-        android:id="@+id/lay_login_methods_reg"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tv_loginwith_reg"
-        android:gravity="center">
+<!--    <LinearLayout-->
+<!--        android:id="@+id/lay_login_methods_reg"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/tv_loginwith_reg"-->
+<!--        android:gravity="center">-->
 
-        <ImageView
-            android:id="@+id/iv_google_reg"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginEnd="20dp"
-            android:src="@raw/google"/>
+<!--        <ImageView-->
+<!--            android:id="@+id/iv_google_reg"-->
+<!--            android:layout_width="30dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:layout_marginEnd="20dp"-->
+<!--            android:src="@raw/google"/>-->
 
-        <ImageView
-            android:id="@+id/iv_facebook_reg"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@raw/facebook" />
-    </LinearLayout>
+<!--        <ImageView-->
+<!--            android:id="@+id/iv_facebook_reg"-->
+<!--            android:layout_width="30dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:src="@raw/facebook" />-->
+<!--    </LinearLayout>-->
 
     <TextView
         android:id="@+id/tv_policy_agreement_reg"
         android:layout_width="360dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/lay_login_methods_reg"
+        android:layout_below="@id/lay_already_have_acc"
         android:layout_centerInParent="true"
         android:layout_marginTop="40dp"
         android:text="Dengan mendaftar, Anda menyetujui Ketentuan Layanan kami dan mengakui bahwa Kebijakan Privasi kami berlaku untuk Anda."
