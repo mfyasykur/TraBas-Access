@@ -6,16 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
 
-    <TextView
-        android:id="@+id/tv_develop_mode"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btn_login"
-        android:layout_centerHorizontal="true"
-        android:text="Masuk sebagai Developer"
-        android:textColor="@color/purple_700"
-        android:textStyle="italic"/>
-
     <ImageView
         android:id="@+id/iv_login_logo"
         android:layout_width="278dp"
@@ -101,7 +91,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:gravity="center_horizontal"
-        android:layout_below="@id/tv_develop_mode">
+        android:layout_below="@id/btn_login">
 
         <TextView
             android:id="@+id/tv_no_acc_yet"
@@ -158,15 +148,15 @@
 <!--            android:src="@raw/facebook" />-->
 <!--    </LinearLayout>-->
 
-    <TextView
-        android:id="@+id/tv_policy_agreement"
-        android:layout_width="360dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/lay_no_account_yet"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="50dp"
-        android:text="Dengan mendaftar, Anda menyetujui Ketentuan Layanan kami dan mengakui bahwa Kebijakan Privasi kami berlaku untuk Anda."
-        android:textAlignment="center"
-        android:textSize="11sp" />
+<!--    <TextView-->
+<!--        android:id="@+id/tv_policy_agreement"-->
+<!--        android:layout_width="360dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/lay_no_account_yet"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:layout_marginTop="50dp"-->
+<!--        android:text="Dengan mendaftar, Anda menyetujui Ketentuan Layanan kami dan mengakui bahwa Kebijakan Privasi kami berlaku untuk Anda."-->
+<!--        android:textAlignment="center"-->
+<!--        android:textSize="11sp" />-->
 
 </RelativeLayout>
