@@ -59,8 +59,6 @@ g
 w
 Gapp/src/main/java/com/ppb/trabas_access/model/dao/TransactionHistory.kt,7\b\7b563c26f23f9513f4d6da7d800e0c414d73e792
 q
-Aapp/src/main/java/com/ppb/trabas_access/fragments/ScanFragment.kt,2\6\26422510b298d316f0cdf39029e44bc83213f35b
-q
 Aapp/src/main/java/com/ppb/trabas_access/fragments/HomeFragment.kt,3\4\34160086f68f1b3aa70e04cc4307d794dd3fb066
 t
 Dapp/src/main/java/com/ppb/trabas_access/fragments/ProfileFragment.kt,3\9\390fb0a474436cef2610e37c7929e99e72eddd2c

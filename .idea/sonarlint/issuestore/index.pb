@@ -56,8 +56,6 @@ P
 app/build.gradle,f\4\f4a01d6a4fcb971362ec00a83903fd3902f52164
 w
 Gapp/src/main/java/com/ppb/trabas_access/model/dao/TransactionHistory.kt,7\b\7b563c26f23f9513f4d6da7d800e0c414d73e792
-q
-Aapp/src/main/java/com/ppb/trabas_access/fragments/ScanFragment.kt,2\6\26422510b298d316f0cdf39029e44bc83213f35b
 g
 7app/src/main/java/com/ppb/trabas_access/MainActivity.kt,b\1\b1911d40d2ac9f681a0a4ec2dfc8673662323640
 q
