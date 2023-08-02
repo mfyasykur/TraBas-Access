@@ -144,6 +144,7 @@
                         android:textSize="20sp"
                         android:fontFamily="@font/font_quan_rounded_regular"/>
                     <TextView
+                        android:id="@+id/tv_balance_value"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
@@ -169,6 +170,7 @@
                         android:textSize="20sp"
                         android:fontFamily="@font/font_quan_rounded_regular"/>
                     <TextView
+                        android:id="@+id/tv_point_value"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
