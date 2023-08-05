@@ -145,6 +145,16 @@ class HomeFragment : Fragment() {
 
         // User Balance & Point
         fetchUserBalance()
+
+        // transaction history
+        binding.tvTransHistory.setOnClickListener {
+            val transactionHistoryFragment = TransactionHistoryFragment()
+            parentFragmentManager
+                .beginTransaction()
+                .replace(R.id.frame_navbar, transactionHistoryFragment)
+                .addToBackStack(null)
+                .commit()
+        }
     }
 
     // Fetch Destination Texts

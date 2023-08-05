@@ -48,6 +48,12 @@ class ProfileFragment : Fragment() {
 
         usersRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
+
+                if (!isAdded) {
+                    // Fragment has been detached from the activity, do nothing
+                    return
+                }
+
                 val user = dataSnapshot.getValue(Users::class.java)
 
                 // Check if phone number is empty or null
@@ -62,6 +68,10 @@ class ProfileFragment : Fragment() {
                     // Show "Tambahkan No. Handphone" button
                     binding.tvPhone.visibility = View.VISIBLE
                     binding.tvPhone.text = getString(R.string.add_phone_button)
+
+                    // Update other views with user data if needed
+                    binding.tvName.text = user?.fullname ?: ""
+                    binding.tvEmail.text = user?.email ?: ""
 
                     // Set click listener for "Tambahkan No. Handphone" button
                     binding.tvPhone.setOnClickListener {
@@ -84,10 +94,6 @@ class ProfileFragment : Fragment() {
                     binding.tvPhone.setTypeface(null, Typeface.NORMAL)
                 }
 
-                // Update other views with user data if needed
-                binding.tvName.text = user?.fullname ?: ""
-                binding.tvEmail.text = user?.email ?: ""
-
                 // Edit Profile
                 binding.btnEditProfile.setOnClickListener {
                     val editProfileFragment = EditProfileFragment()
@@ -100,6 +106,11 @@ class ProfileFragment : Fragment() {
             }
 
             override fun onCancelled(databaseError: DatabaseError) {
+                if (!isAdded) {
+                    // Fragment has been detached from the activity, do nothing
+                    return
+                }
+
                 Log.e("Profile Fragment", "Error getting user data: ", databaseError.toException())
             }
         })

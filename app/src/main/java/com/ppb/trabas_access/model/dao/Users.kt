@@ -5,6 +5,6 @@ data class Users(
     var email: String? = null,
     var phone: String? = null,
     var password: String? = null,
-    var balance: Long? = 0,
+    var balance: Long? = 10000,
     var point: Int? = 0
 )

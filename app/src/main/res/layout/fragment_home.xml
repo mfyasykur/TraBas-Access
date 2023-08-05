@@ -194,17 +194,11 @@
                         android:id="@+id/tv_trans_history"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="@drawable/selector_button_hover"
                         android:text="Riwayat\nTransaksi"
                         android:textAlignment="center"
                         android:textSize="20sp"
                         android:fontFamily="@font/font_quan_rounded_regular"/>
-<!--                    <TextView-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:text="Transaksi"-->
-<!--                        android:textAlignment="center"-->
-<!--                        android:textSize="20sp"-->
-<!--                        android:fontFamily="@font/font_quan_rounded_regular"/>-->
 
                 </LinearLayout>
 

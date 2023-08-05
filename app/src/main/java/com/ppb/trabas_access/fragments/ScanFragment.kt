@@ -26,6 +26,7 @@ import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.MutableData
 import com.google.firebase.database.Transaction
@@ -34,7 +35,10 @@ import com.ppb.trabas_access.databinding.FragmentScanBinding
 import com.ppb.trabas_access.model.dao.TransactionHistory
 import com.ppb.trabas_access.model.dao.Users
 import java.io.IOException
-import java.util.UUID
+import java.text.DateFormat
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 class ScanFragment : Fragment() {
 
@@ -42,8 +46,10 @@ class ScanFragment : Fragment() {
     private lateinit var surfaceView: SurfaceView
     private lateinit var cameraSource: CameraSource
     private lateinit var qrCodeDetector: BarcodeDetector
+    private lateinit var transactionHistoryRef: DatabaseReference
     private var isScanningEnabled = true
     private var isDialogShowing = false
+    private var isProcessingPayment = false
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -109,7 +115,7 @@ class ScanFragment : Fragment() {
 
                 if (qrCodes.size() > 0) {
                     val qrCodeValue = qrCodes.valueAt(0).displayValue
-                    if (!isDialogShowing) { // Check if the payment success dialog is not showing
+                    if (!isDialogShowing && !isProcessingPayment) { // Check if the payment success dialog is not showing
                         processQRPayment(qrCodeValue)
                     }
                 }
@@ -119,20 +125,34 @@ class ScanFragment : Fragment() {
 
     private fun processQRPayment(qrCodeValue: String) {
 
+        if (!isAdded || requireActivity().isFinishing) {
+            // Fragment sudah dihancurkan atau activity sudah selesai, tidak perlu melanjutkan pemrosesan
+            return
+        }
+
+        if (isProcessingPayment) {
+            return
+        }
+
+        isProcessingPayment = true
+
         val qrCodeData = decodeQRCode(qrCodeValue)
         val transactionType = qrCodeData["type"]
-        val ticketPrice = 3900 // Harga tiket ditentukan di sistem
-        val timeStamp = System.currentTimeMillis()
+        val ticketPrice = 3900L // Harga tiket ditentukan di sistem
+        val timeStamp = getCurrentDateTimeFormatted()
 
         // pengecekan tipe transaksi
-        if (transactionType == "TRABAS-ACCESS PAYMENT") {
+        if (transactionType == "TRABAS-ACCESS QR-PAYMENT") {
             // pengurangan saldo pengguna
             val currentUser = FirebaseAuth.getInstance().currentUser
             currentUser?.let { user ->
                 val userRef = FirebaseDatabase.getInstance().reference.child("users").child(user.uid)
+
                 userRef.runTransaction(object : Transaction.Handler {
                     override fun doTransaction(currentData: MutableData): Transaction.Result {
+
                         val userSnapshot = currentData.getValue(Users::class.java)
+                        transactionHistoryRef = FirebaseDatabase.getInstance().reference.child("transactionHistory")
 
                         // Pastikan pengguna ada dan memiliki saldo yang cukup
                         if (userSnapshot != null && userSnapshot.balance!! >= ticketPrice) {
@@ -141,19 +161,32 @@ class ScanFragment : Fragment() {
                             currentData.value = userSnapshot
 
                             // Simpan data transaksi ke tabel transactionHistory
-                            val transactionHistoryRef = FirebaseDatabase.getInstance().reference.child("transactionHistory")
                             val transactionID = generateRandomTransactionID() // Generate transactionID secara random
-                            val transaction = TransactionHistory(user.uid, transactionID, ticketPrice, timeStamp, "SUCCESS")
+                            val transaction = TransactionHistory(user.uid, user.email, transactionID, ticketPrice, timeStamp, "SUCCESS")
                             transactionHistoryRef.child(transactionID).setValue(transaction)
 
                             qrCodeDetector.release()
 
                             // Transaksi berhasil, kembalikan Result.success()
                             return Transaction.success(currentData)
-                        }
+                        } else {
 
-                        // Jika saldo tidak cukup, kembalikan Result.abort()
-                        return Transaction.abort()
+                            // Jika saldo tidak cukup, set status transaksi menjadi "FAILED"
+                            val transactionID =
+                                generateRandomTransactionID() // Generate transactionID secara random
+                            val transaction = TransactionHistory(
+                                user.uid,
+                                user.email,
+                                transactionID,
+                                ticketPrice,
+                                timeStamp,
+                                "FAILED"
+                            )
+                            transactionHistoryRef.child(transactionID).setValue(transaction)
+
+                            // Kembalikan Result.abort() untuk menandakan transaksi gagal
+                            return Transaction.abort()
+                        }
                     }
 
                     override fun onComplete(
@@ -161,28 +194,42 @@ class ScanFragment : Fragment() {
                         committed: Boolean,
                         currentData: DataSnapshot?
                     ) {
-                        if (committed) {
-                            showToast("Pembayaran berhasil!")
-                            isScanningEnabled = false
-                            isDialogShowing = true
-                            closeScanFragment()
-                            showPaymentSuccessDialog()
-                        } else {
-                            showToast("Saldo tidak cukup untuk pembayaran!")
-                            isScanningEnabled = true // Enable scanning again
+                        activity?.runOnUiThread {
+                            if (committed && error == null) {
+                                if ((currentData != null) && currentData.exists()) {
+                                    // Transaksi berhasil
+                                    showToast("Pembayaran berhasil!")
+                                    isScanningEnabled = false
+                                    isDialogShowing = true
+                                    showPaymentSuccessDialog()
+                                    closeScanFragment()
+                                }
+                            } else {
+                                // Transaksi gagal karena error lain (misalnya koneksi ke database terputus)
+                                showToast("Terjadi kesalahan saat melakukan pembayaran.")
+                                showToast("Saldo tidak cukup untuk pembayaran!")
+                                isScanningEnabled = false
+                                closeScanFragment()
+                            }
                         }
                     }
                 })
             }
         } else {
-            showToast("QR Code tidak valid.")
-            isScanningEnabled = true // Enable scanning again
+            requireActivity().runOnUiThread {
+                showToast("Pembayaran Tidak Berhasil.")
+                isScanningEnabled = false
+                isProcessingPayment = true
+                closeScanFragment()
+            }
         }
 
     }
 
     private fun closeScanFragment() {
-        requireActivity().supportFragmentManager.popBackStackImmediate()
+        requireActivity().runOnUiThread {
+            requireActivity().supportFragmentManager.popBackStackImmediate()
+        }
     }
 
     private fun showPaymentSuccessDialog() {
@@ -194,7 +241,7 @@ class ScanFragment : Fragment() {
                     ViewGroup.LayoutParams.MATCH_PARENT,
                     ViewGroup.LayoutParams.WRAP_CONTENT
                 )
-                setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+                setBackgroundDrawable(ColorDrawable(Color.WHITE))
                 attributes.windowAnimations = R.style.DialogAnimation
                 setGravity(Gravity.CENTER)
             }
@@ -202,9 +249,8 @@ class ScanFragment : Fragment() {
             val closeButton: Button = dialog.findViewById(R.id.btn_close)
             closeButton.setOnClickListener {
                 dialog.dismiss()
-                isScanningEnabled = true // Enable scanning again
+                isScanningEnabled = false
                 isDialogShowing = false
-                setupQRCodeScanner() // Restart scanning
             }
 
             dialog.show()
@@ -213,7 +259,18 @@ class ScanFragment : Fragment() {
 
 
     private fun generateRandomTransactionID(): String {
-        return UUID.randomUUID().toString()
+        val allowedChars = ('A'..'Z') + ('0'..'9')
+
+        // generate max 6 characters
+        return (1..6)
+            .map { allowedChars.random() }
+            .joinToString("")
+    }
+
+    private fun getCurrentDateTimeFormatted(): String {
+        val currentDateTime = Date()
+        val dateFormatter = DateFormat.getDateTimeInstance(DateFormat.SHORT, DateFormat.SHORT, Locale.getDefault())
+        return dateFormatter.format(currentDateTime)
     }
 
     private fun decodeQRCode(qrCodeValue: String): Map<String, String> {
@@ -221,18 +278,22 @@ class ScanFragment : Fragment() {
         val dataMap = mutableMapOf<String, String>()
         val dataParts = qrCodeValue.split(" ")
 
-        if (dataParts.size == 3 && dataParts[0] == "TRABAS-ACCESS" && dataParts[1] == "PAYMENT") {
+        if (dataParts.size == 3 && dataParts[0] == "TRABAS-ACCESS" && dataParts[1] == "QR-PAYMENT") {
             dataMap["type"] = dataParts[0] + " " + dataParts[1]
             dataMap["transaction_id"] = dataParts[2]
         } else {
             showToast("QR Code tidak valid. Pastikan QR Code yang Anda pindai benar.")
+            isProcessingPayment = true
         }
 
         return dataMap
     }
 
     private fun showToast(message: String) {
-        Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
+        requireActivity().runOnUiThread {
+            Toast.makeText(requireActivity(), message, Toast.LENGTH_SHORT).show()
+            isProcessingPayment = false
+        }
     }
 
     private fun requestCameraPermission() {
@@ -272,5 +333,9 @@ class ScanFragment : Fragment() {
         }
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        qrCodeDetector.release()
+    }
 
 }
